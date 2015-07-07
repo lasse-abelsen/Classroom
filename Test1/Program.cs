@@ -10,6 +10,8 @@ namespace Test1
     {
         static void Main(string[] args)
         {
+
+            //teset
             #region create students
             Student stud1 = new Student("Per",  "Olsen", 1);
             Student stud2 = new Student("Knud", "Petersen", 1, "lol@lol.dk");
