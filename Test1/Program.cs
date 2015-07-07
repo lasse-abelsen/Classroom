@@ -49,6 +49,29 @@ namespace Test1
             Console.WriteLine("Mathclass has {0} teachers", MathClass.Hosts.Count);
             Console.WriteLine("ChemistryClass has {0} teachers", ChemistryClass.Hosts.Count);
 
+
+            #region List Classes, teachers, students
+            string indent = "   ";
+            Console.WriteLine("Classes available: ");
+            foreach (var cl in ClassDef.AllClasses)
+            {
+                Console.WriteLine(indent + cl.ClassName);
+            }
+            Console.WriteLine("Teachers: ");
+            foreach (var teacher in Teacher.teacherList)
+            {
+                Console.WriteLine(indent + "{0} {1}", teacher.FirstName, teacher.LastName);
+            }
+            Console.WriteLine("All students at level 2 or higher:");
+            foreach (var stud in Student.students)
+            {
+                if (stud.ClassLevel > 1)
+                {
+                    Console.WriteLine(indent + "{0} {1}", stud.FirstName, stud.LastName);
+                }
+            }
+            #endregion
+
             Console.Read();
         }
     }

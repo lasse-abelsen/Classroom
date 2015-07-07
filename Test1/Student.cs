@@ -15,10 +15,11 @@ namespace Test1
             LastName = lname;
             ContactMail = cmail;
             ClassLevel = clevel;
+            students.Add(this);
         }
 
         public int ClassLevel { get; set; }
-
+        public static List<Student> students = new List<Student>();
         //se teacher.cs for guid
         public Guid ID;
 

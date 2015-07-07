@@ -8,11 +8,11 @@ namespace Test1
 {
     public abstract class Person
     {
-        public Person(string fname, string lname, string cmail)
+        public Person(string fName, string lName, string cMail)
         {
-            FirstName = fname;
-            LastName = lname;
-            ContactMail = cmail;
+            FirstName = fName;
+            LastName = lName;
+            ContactMail = cMail;
         }
 
         public string FirstName { get; set; }

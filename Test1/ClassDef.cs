@@ -17,6 +17,7 @@ namespace Test1
             MinAttendants = mAttendants;
             Hosts = new List<Teacher>();
             Students = new List<Student>();
+            AllClasses.Add(this);
         }
 
         public Guid ID;
@@ -24,6 +25,7 @@ namespace Test1
         public int MinAttendants { get; set; }
         public List<Teacher> Hosts { get; set; }
         public List<Student> Students { get; set; }
+        public static List<ClassDef> AllClasses = new List<ClassDef>();
 
         public void AddTeacherToClass(Teacher teacher)
         {

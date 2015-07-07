@@ -15,9 +15,11 @@ namespace Test1
             FirstName = fname;
             LastName = lname;
             ContactMail = cmail;
+            teacherList.Add(this);
         }
 
         public List<ClassDef> ClassList { get; set; }
+        public static List<Teacher> teacherList = new List<Teacher>();
 
         //Guid = unique identifier, se fx https://msdn.microsoft.com/en-us/library/system.guid.newguid(v=vs.110).aspx
         private Guid ID;
