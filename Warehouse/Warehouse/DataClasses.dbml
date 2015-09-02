@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WarehouseDB" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Foolsmate\SQLExpress;Initial Catalog=WarehouseDB;Integrated Security=True" SettingsObjectName="Warehouse.Properties.Settings" SettingsPropertyName="WarehouseDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Discount" Member="Discounts">
+    <Type Name="Discount">
+      <Column Name="DiscountId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiscountPercentage" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DiscountDKK" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceDKK" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentAmount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MinAmount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="AccessLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserAccessLevel" Member="UserAccessLevels">
+    <Type Name="UserAccessLevel">
+      <Column Name="AccessId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccessLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
